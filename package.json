@@ -1,0 +1,29 @@
+{
+  "name": "oytun-yuk-smmm",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/app.mjs",
+  "scripts": {
+    "start": "node src/app.mjs",
+    "dev": "node --watch src/app.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vniverse77/oytunyuk.com.tr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vniverse77/oytunyuk.com.tr/issues"
+  },
+  "homepage": "https://github.com/Vniverse77/oytunyuk.com.tr#readme",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "multer": "^2.1.1",
+    "nodemailer": "^8.0.7",
+    "pg": "^8.20.0"
+  }
+}

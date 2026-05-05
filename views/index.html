@@ -1,0 +1,1318 @@
+<!doctype html>
+<html lang="tr" dir="ltr" id="app">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Oytun Yük | Global Danışmanlık & Mali Müşavirlik</title>
+        <meta
+            name="description"
+            content="Türkiye'de faaliyet gösteren yabancı yatırımcıların TÜRMOB ruhsatlı mali müşaviri. Çalışma müsaadesi, vergi istisnası, şirket kuruluşu ve mevzuat danışmanlığı."
+        />
+    </head>
+    <body>
+        <!-- LOADING OVERLAY -->
+        <div id="lang-loader">
+            <div class="loader-logo">Oytun Yük <em>Global</em></div>
+        </div>
+
+        <!-- ─── NAVIGATION ─── -->
+        <nav>
+            <a href="#home" class="nav-logo">Oytun Yük <em>Global</em></a>
+            <ul class="nav-links">
+                <li><a href="#services" data-i18n="nav.services"></a></li>
+                <li><a href="#news" data-i18n="nav.news"></a></li>
+                <li><a href="#about" data-i18n="nav.about"></a></li>
+                <li><a href="#contact" data-i18n="nav.contact"></a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="lang-switcher">
+                    <button class="lang-btn" onclick="setLang('tr')">TR</button>
+                    <button class="lang-btn" onclick="setLang('en')">EN</button>
+                    <button class="lang-btn" onclick="setLang('ar')">AR</button>
+                </div>
+                <a href="/login" class="nav-cta" data-i18n="nav.login"></a>
+                <!-- Hamburger (mobile) -->
+                <button
+                    class="hamburger"
+                    id="hamburger"
+                    aria-label="Menü"
+                    onclick="toggleMenu()"
+                >
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a
+                href="#services"
+                data-i18n="nav.services"
+                onclick="toggleMenu()"
+            ></a>
+            <a href="#news" data-i18n="nav.news" onclick="toggleMenu()"></a>
+            <a href="#about" data-i18n="nav.about" onclick="toggleMenu()"></a>
+            <a
+                href="#contact"
+                data-i18n="nav.contact"
+                onclick="toggleMenu()"
+            ></a>
+            <a href="/login" class="mobile-login" data-i18n="nav.login"></a>
+        </div>
+
+        <!-- ─── HERO ─── -->
+        <section id="home" class="hero">
+            <span class="hero-badge fade-up">
+                <span class="badge-dot"></span>
+                <span data-i18n="hero.badge"></span>
+            </span>
+            <h1 class="fade-up delay-1" data-i18n-html="hero.headline"></h1>
+            <p class="hero-sub fade-up delay-2" data-i18n="hero.sub"></p>
+            <div class="hero-actions fade-up delay-3">
+                <a
+                    href="#contact"
+                    class="btn-primary"
+                    data-i18n="hero.cta1"
+                ></a>
+                <a href="#services" class="btn-ghost" data-i18n="hero.cta2"></a>
+            </div>
+            <div class="hero-scroll" aria-hidden="true">
+                <div class="scroll-track"><div class="scroll-thumb"></div></div>
+            </div>
+        </section>
+
+        <!-- ─── CREDIBILITY BAR (1. EKLENDİ) ─── -->
+        <div class="credibility-bar fade-up">
+            <div class="credibility-inner">
+                <div class="cred-bar-item">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                        />
+                    </svg>
+                    <span data-i18n="cred.turmob"></span>
+                </div>
+                <div class="cred-bar-sep"></div>
+                <div class="cred-bar-item">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                        />
+                    </svg>
+                    <span data-i18n="cred.sicil"></span>
+                </div>
+                <div class="cred-bar-sep"></div>
+                <div class="cred-bar-item">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                    </svg>
+                    <span data-i18n="cred.langs"></span>
+                </div>
+                <div class="cred-bar-sep"></div>
+                <div class="cred-bar-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span data-i18n="cred.exp"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ─── STATS ─── -->
+        <div class="stats-section">
+            <div class="stats-grid fade-up">
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label" data-i18n="stats.experience"></div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label" data-i18n="stats.clients"></div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label" data-i18n="stats.languages"></div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">%100</div>
+                    <div class="stat-label" data-i18n="stats.compliance"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- ─── SERVICES ─── -->
+        <div class="section-inner" id="services">
+            <div class="fade-up">
+                <div class="section-eyebrow" data-i18n="services.label"></div>
+                <h2 class="section-title" data-i18n="services.title"></h2>
+                <p class="section-desc" data-i18n="services.sub"></p>
+            </div>
+            <div class="services-grid fade-up delay-1">
+                <div class="service-card">
+                    <div class="svc-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414A1 1 0 0119 8.414V19a2 2 0 01-2 2z"
+                            />
+                        </svg>
+                    </div>
+                    <h3 data-i18n="services.s1.title"></h3>
+                    <p data-i18n="services.s1.desc"></p>
+                    <svg class="svc-arrow" viewBox="0 0 24 24">
+                        <path d="M7 17L17 7M17 7H7M17 7v10" />
+                    </svg>
+                </div>
+                <div class="service-card">
+                    <div class="svc-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                            />
+                        </svg>
+                    </div>
+                    <h3 data-i18n="services.s2.title"></h3>
+                    <p data-i18n="services.s2.desc"></p>
+                    <svg class="svc-arrow" viewBox="0 0 24 24">
+                        <path d="M7 17L17 7M17 7H7M17 7v10" />
+                    </svg>
+                </div>
+                <div class="service-card">
+                    <div class="svc-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                            />
+                        </svg>
+                    </div>
+                    <h3 data-i18n="services.s3.title"></h3>
+                    <p data-i18n="services.s3.desc"></p>
+                    <svg class="svc-arrow" viewBox="0 0 24 24">
+                        <path d="M7 17L17 7M17 7H7M17 7v10" />
+                    </svg>
+                </div>
+                <div class="service-card">
+                    <div class="svc-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"
+                            />
+                        </svg>
+                    </div>
+                    <h3 data-i18n="services.s4.title"></h3>
+                    <p data-i18n="services.s4.desc"></p>
+                    <svg class="svc-arrow" viewBox="0 0 24 24">
+                        <path d="M7 17L17 7M17 7H7M17 7v10" />
+                    </svg>
+                </div>
+                <div class="service-card">
+                    <div class="svc-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                            />
+                        </svg>
+                    </div>
+                    <h3 data-i18n="services.s5.title"></h3>
+                    <p data-i18n="services.s5.desc"></p>
+                    <svg class="svc-arrow" viewBox="0 0 24 24">
+                        <path d="M7 17L17 7M17 7H7M17 7v10" />
+                    </svg>
+                </div>
+                <div class="service-card">
+                    <div class="svc-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+                            />
+                        </svg>
+                    </div>
+                    <h3 data-i18n="services.s6.title"></h3>
+                    <p data-i18n="services.s6.desc"></p>
+                    <svg class="svc-arrow" viewBox="0 0 24 24">
+                        <path d="M7 17L17 7M17 7H7M17 7v10" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- ─── DUYURULAR / MEVZUAT (2. EKLENDİ) ─── -->
+        <div class="section-inner" id="news">
+            <div class="news-header fade-up">
+                <div>
+                    <div class="section-eyebrow" data-i18n="news.label"></div>
+                    <h2 class="section-title" data-i18n="news.title"></h2>
+                </div>
+                <a
+                    href="/mevzuat"
+                    class="news-all-link"
+                    data-i18n="news.all"
+                ></a>
+            </div>
+            <div class="news-grid fade-up delay-1">
+                <article class="news-card">
+                    <div class="news-meta">
+                        <span
+                            class="news-tag"
+                            data-i18n="news.tag.vergi"
+                        ></span>
+                        <span class="news-date">12 Nis 2025</span>
+                    </div>
+                    <h3 data-i18n="news.n1.title"></h3>
+                    <p data-i18n="news.n1.desc"></p>
+                    <a
+                        href="/mevzuat/1"
+                        class="news-read"
+                        data-i18n="news.read"
+                    ></a>
+                </article>
+                <article class="news-card">
+                    <div class="news-meta">
+                        <span class="news-tag" data-i18n="news.tag.sgk"></span>
+                        <span class="news-date">28 Mar 2025</span>
+                    </div>
+                    <h3 data-i18n="news.n2.title"></h3>
+                    <p data-i18n="news.n2.desc"></p>
+                    <a
+                        href="/mevzuat/2"
+                        class="news-read"
+                        data-i18n="news.read"
+                    ></a>
+                </article>
+                <article class="news-card">
+                    <div class="news-meta">
+                        <span
+                            class="news-tag"
+                            data-i18n="news.tag.yatirim"
+                        ></span>
+                        <span class="news-date">5 Mar 2025</span>
+                    </div>
+                    <h3 data-i18n="news.n3.title"></h3>
+                    <p data-i18n="news.n3.desc"></p>
+                    <a
+                        href="/mevzuat/3"
+                        class="news-read"
+                        data-i18n="news.read"
+                    ></a>
+                </article>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- ─── VERGİ TAKVİMİ (3. EKLENDİ) ─── -->
+        <div class="section-inner" id="takvim">
+            <div class="fade-up">
+                <div class="section-eyebrow" data-i18n="cal.label"></div>
+                <h2 class="section-title" data-i18n="cal.title"></h2>
+                <p class="section-desc" data-i18n="cal.sub"></p>
+            </div>
+            <div class="cal-table-wrap fade-up delay-1">
+                <table class="cal-table">
+                    <thead>
+                        <tr>
+                            <th data-i18n="cal.th.deadline"></th>
+                            <th data-i18n="cal.th.type"></th>
+                            <th data-i18n="cal.th.period"></th>
+                            <th data-i18n="cal.th.note"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="cal-upcoming">
+                            <td><span class="cal-date">26 May</span></td>
+                            <td data-i18n="cal.r1.type"></td>
+                            <td data-i18n="cal.r1.period"></td>
+                            <td>
+                                <span
+                                    class="cal-badge urgent"
+                                    data-i18n="cal.badge.upcoming"
+                                ></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="cal-date">26 May</span></td>
+                            <td data-i18n="cal.r2.type"></td>
+                            <td data-i18n="cal.r2.period"></td>
+                            <td>
+                                <span
+                                    class="cal-badge urgent"
+                                    data-i18n="cal.badge.upcoming"
+                                ></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="cal-date">23 Haz</span></td>
+                            <td data-i18n="cal.r3.type"></td>
+                            <td data-i18n="cal.r3.period"></td>
+                            <td>
+                                <span
+                                    class="cal-badge"
+                                    data-i18n="cal.badge.normal"
+                                ></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="cal-date">26 Haz</span></td>
+                            <td data-i18n="cal.r4.type"></td>
+                            <td data-i18n="cal.r4.period"></td>
+                            <td>
+                                <span
+                                    class="cal-badge"
+                                    data-i18n="cal.badge.normal"
+                                ></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="cal-date">28 Tem</span></td>
+                            <td data-i18n="cal.r5.type"></td>
+                            <td data-i18n="cal.r5.period"></td>
+                            <td>
+                                <span
+                                    class="cal-badge"
+                                    data-i18n="cal.badge.normal"
+                                ></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="cal-disclaimer" data-i18n="cal.disclaimer"></p>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- ─── ABOUT ─── -->
+        <div class="section-inner" id="about">
+            <div class="about-grid">
+                <div class="about-visual fade-up">
+                    <div class="about-monogram">OY</div>
+                    <div class="about-badge">
+                        <div class="about-badge-name">Oytun Yük</div>
+                        <div class="about-badge-title">
+                            SMMM | Global Danışman
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content fade-up delay-1">
+                    <div class="section-eyebrow" data-i18n="about.label"></div>
+                    <h2 class="section-title" data-i18n="about.title"></h2>
+                    <p data-i18n="about.p1"></p>
+                    <p data-i18n="about.p2"></p>
+                    <div class="credentials">
+                        <div class="cred-item">
+                            <span class="cred-dot"></span
+                            ><span data-i18n="about.c1"></span>
+                        </div>
+                        <div class="cred-item">
+                            <span class="cred-dot"></span
+                            ><span data-i18n="about.c2"></span>
+                        </div>
+                        <div class="cred-item">
+                            <span class="cred-dot"></span
+                            ><span data-i18n="about.c3"></span>
+                        </div>
+                        <div class="cred-item">
+                            <span class="cred-dot"></span
+                            ><span data-i18n="about.c4"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- ─── SSS / FAQ (4. EKLENDİ) ─── -->
+        <div class="section-inner" id="faq">
+            <div class="fade-up">
+                <div class="section-eyebrow" data-i18n="faq.label"></div>
+                <h2 class="section-title" data-i18n="faq.title"></h2>
+            </div>
+            <div class="faq-list fade-up delay-1" id="faqList">
+                <!-- JS tarafından doldurulacak -->
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- ─── CONTACT ─── -->
+        <div class="section-inner" id="contact">
+            <div class="contact-wrap fade-up">
+                <div class="contact-info">
+                    <div
+                        class="section-eyebrow"
+                        data-i18n="contact.label"
+                    ></div>
+                    <h2 class="section-title" data-i18n="contact.title"></h2>
+                    <p data-i18n="contact.sub"></p>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <strong>E-posta</strong>info@oytun-yuk.com.tr
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <strong data-i18n="contact.phone"></strong>+90
+                                (212) XXX XX XX
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                                    />
+                                    <path
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <strong data-i18n="contact.address"></strong
+                                >İstanbul, Türkiye
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label data-i18n="contact.form.name"></label>
+                        <input
+                            type="text"
+                            data-i18n-placeholder="contact.form.namePH"
+                            required
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="contact.form.email"></label>
+                        <input
+                            type="email"
+                            placeholder="email@example.com"
+                            required
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="contact.form.subject"></label>
+                        <select>
+                            <option data-i18n="contact.form.opt1"></option>
+                            <option data-i18n="contact.form.opt2"></option>
+                            <option data-i18n="contact.form.opt3"></option>
+                            <option data-i18n="contact.form.opt4"></option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="contact.form.message"></label>
+                        <textarea
+                            data-i18n-placeholder="contact.form.messagePH"
+                        ></textarea>
+                    </div>
+                    <button
+                        type="submit"
+                        class="btn-primary btn-submit"
+                        id="submitBtn"
+                        data-i18n="contact.form.send"
+                    ></button>
+                    <div
+                        class="form-success"
+                        id="formSuccess"
+                        data-i18n="contact.form.success"
+                    ></div>
+                </form>
+            </div>
+        </div>
+
+        <!-- ─── FOOTER ─── -->
+        <div class="footer-divider"></div>
+        <!-- 5. TÜRMOB bilgisi footer'a eklendi -->
+        <div class="footer-inner">
+            <div class="footer-left">
+                <p class="footer-copy" data-i18n="footer.copy"></p>
+                <p class="footer-note" data-i18n="footer.disclaimer"></p>
+            </div>
+            <div class="footer-creds">
+                <span data-i18n="footer.turmob"></span>
+                <span class="footer-sep">·</span>
+                <span data-i18n="footer.sicil"></span>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════
+             JAVASCRIPT — i18n motoru + etkileşimler
+             (Production'da Nunjucks SSR + CF-IPCountry ile değiştirilecek)
+        ═══════════════════════════════════════════════ -->
+        <script>
+            // ─── TRANSLATIONS ──────────────────────────────────────────────────────
+            const T = {
+                tr: {
+                    nav: {
+                        services: "Hizmetler",
+                        news: "Mevzuat",
+                        about: "Hakkımızda",
+                        contact: "İletişim",
+                        login: "Müşteri Girişi",
+                    },
+                    hero: {
+                        // DİL DÜZELTİLDİ: Yatırım şirketi → Mali müşavir tonu
+                        badge: "TÜRMOB Ruhsatlı | 15 Yıl Deneyim",
+                        headline:
+                            "Yabancı Yatırımcıların<br><em>Türkiye'deki</em><br>Mali Müşaviri",
+                        sub: "Türkiye'de faaliyet gösteren yabancı sermayeli şirketlere vergi, mevzuat ve müşavirlik hizmetleri sunuyoruz.",
+                        cta1: "Ücretsiz Ön Görüşme",
+                        cta2: "Hizmetlerimizi İnceleyin →",
+                    },
+                    cred: {
+                        turmob: "TÜRMOB Üyesi & Ruhsatlı SMMM",
+                        sicil: "Sicil No: XXXX-TR",
+                        langs: "TR · EN · AR Dil Desteği",
+                        exp: "15+ Yıl Mesleki Deneyim",
+                    },
+                    stats: {
+                        experience: "Yıl Deneyim",
+                        clients: "Yabancı Müvekkil",
+                        languages: "Dil Desteği",
+                        compliance: "Mevzuat Uyumu",
+                    },
+                    services: {
+                        label: "Hizmetlerimiz",
+                        title: "Türkiye'deki yasal süreçlerinizi biz yönetiyoruz",
+                        sub: "Yabancı sermayeli şirketler ve bireysel yatırımcılar için kapsamlı mali müşavirlik ve mevzuat danışmanlığı.",
+                        s1: {
+                            title: "Çalışma Müsaadesi",
+                            desc: "Yabancı çalışanlar ve yöneticiler için izin başvurusu, takibi ve yenileme süreçlerinin eksiksiz yönetimi.",
+                        },
+                        s2: {
+                            title: "Vergi İstisna ve Teşviki",
+                            desc: "Yabancı yatırımcılara tanınan vergi avantajlarından yasal çerçevede maksimum ölçüde yararlanmanız için planlama.",
+                        },
+                        s3: {
+                            title: "Vergi Kanunu Değişiklikleri",
+                            desc: "Sürekli değişen Türk vergi mevzuatını takip ediyor, şirketinizi her değişikliğe önceden hazırlıyoruz.",
+                        },
+                        s4: {
+                            title: "Sosyal Sigorta Kanunu",
+                            desc: "Yabancı çalışanların Türkiye'deki SGK yükümlülükleri ve sigorta süreçlerinin mevzuata uygun yönetimi.",
+                        },
+                        s5: {
+                            title: "Şirket Kuruluşu",
+                            desc: "Yabancı sermayeli şirket kuruluşu, ticaret sicili tescili ve tüm yasal prosedürlerin tam yönetimi.",
+                        },
+                        s6: {
+                            title: "Muhasebe & Mali Müşavirlik",
+                            desc: "Türk muhasebe standartlarına uygun kayıt, beyanname hazırlama ve finansal raporlama hizmetleri.",
+                        },
+                    },
+                    news: {
+                        label: "Mevzuat & Duyurular",
+                        title: "Güncel vergi ve mevzuat haberleri",
+                        all: "Tüm Duyurular →",
+                        read: "Devamını Oku →",
+                        tag: {
+                            vergi: "Vergi",
+                            sgk: "SGK",
+                            yatirim: "Yatırım Teşviki",
+                        },
+                        n1: {
+                            title: "2025 Yılı Kurumlar Vergisi Oranı Değişikliği",
+                            desc: "Hazine ve Maliye Bakanlığı'nın açıklamasıyla 2025 dönemi için kurumlar vergisi oranında yapılan güncellemeler ve yabancı sermayeli şirketlere etkileri.",
+                        },
+                        n2: {
+                            title: "Yabancı Çalışanlar İçin SGK Tescil Zorunluluğu",
+                            desc: "Türkiye'de istihdam edilen yabancı uyruklu çalışanların sosyal güvenlik kaydı ve prim ödeme yükümlülüklerine ilişkin güncel düzenleme.",
+                        },
+                        n3: {
+                            title: "Yeni Yatırım Teşvik Belgesi Başvuru Rehberi",
+                            desc: "Ekonomi Bakanlığı'nın yayımladığı güncel teşvik belgesi başvuru kriterleri ve yabancı yatırımcılara tanınan öncelikli bölge avantajları.",
+                        },
+                    },
+                    cal: {
+                        label: "Vergi Takvimi",
+                        title: "Yaklaşan beyanname tarihleri",
+                        sub: "Türkiye'deki vergi ve SGK yükümlülüklerinizi takip edin. Tarihleri kaçırmamak için danışmanınızla koordineli çalışın.",
+                        th: {
+                            deadline: "Son Tarih",
+                            type: "Beyanname / Bildirim",
+                            period: "Dönem",
+                            note: "Durum",
+                        },
+                        r1: {
+                            type: "Muhtasar ve Prim Beyannamesi",
+                            period: "Nisan 2025",
+                        },
+                        r2: {
+                            type: "KDV Beyannamesi (1)",
+                            period: "Nisan 2025",
+                        },
+                        r3: {
+                            type: "Geçici Vergi Beyannamesi",
+                            period: "Q1 2025",
+                        },
+                        r4: {
+                            type: "Muhtasar ve Prim Beyannamesi",
+                            period: "Mayıs 2025",
+                        },
+                        r5: {
+                            type: "KDV Beyannamesi (1)",
+                            period: "Mayıs 2025",
+                        },
+                        badge: { upcoming: "Yaklaşıyor", normal: "Planlı" },
+                        disclaimer:
+                            "* Resmi takvim için Gelir İdaresi Başkanlığı (gib.gov.tr) web sitesini takip ediniz.",
+                    },
+                    about: {
+                        label: "Hakkımızda",
+                        title: "Güven ve mesleki uzmanlık üzerine kurulu bir müşavirlik",
+                        p1: "Türkiye'de faaliyet göstermek isteyen yabancı yatırımcılara özgü mali ve vergi danışmanlığı hizmetleri sunuyoruz. TÜRMOB ruhsatlı mali müşavir olarak, mevzuat süreçlerini sizin adınıza eksiksiz yürütüyoruz.",
+                        p2: "Türkçe, İngilizce ve Arapça dil desteğimizle farklı ülkelerden müvekkillerimize kesintisiz hizmet veriyoruz. Her müvekkile özel çözüm üretmek temel prensibimizdir.",
+                        c1: "Serbest Muhasebeci Mali Müşavir (SMMM) — TÜRMOB Ruhsatlı",
+                        c2: "Yabancı Sermaye Yatırımları Mevzuatı Uzmanı",
+                        c3: "TÜRMOB üyesi, sürekli mesleki gelişim programı",
+                        c4: "200'den fazla yabancı yatırımcıya başarılı hizmet",
+                    },
+                    faq: {
+                        label: "Sık Sorulan Sorular",
+                        title: "Yabancı yatırımcıların merak ettikleri",
+                        items: [
+                            {
+                                q: "Yabancı uyruklu biri Türkiye'de şirket kurabilir mi?",
+                                a: "Evet. Türk hukuku yabancı uyruklu gerçek ve tüzel kişilerin Limited (Ltd. Şti.) veya Anonim (A.Ş.) şirket kurmasına izin vermektedir. Asgari sermaye ve noter onaylı belgeler dahil tüm kuruluş sürecini sizin adınıza yönetiyoruz.",
+                            },
+                            {
+                                q: "Çalışma izni başvurusu ne kadar sürer?",
+                                a: "Bakanlık yasal süre 30 iş günüdür; ancak eksiksiz başvurularda bu süre genellikle 15-20 güne inebilmektedir. Belge hazırlama ve e-devlet üzerinden takip dahil tüm süreci biz yürütürüz.",
+                            },
+                            {
+                                q: "Yabancı yatırımcılara tanınan vergi avantajları nelerdir?",
+                                a: "Öncelikli yatırım bölgelerinde KDV ve gümrük vergisi muafiyeti, yatırım teşvik belgesiyle indirimli kurumlar vergisi oranı, Ar-Ge ve teknoloji yatırımlarında stopaj indirimi gibi teşvikler mevcuttur. Şirketinizin profiline göre uygulanabilecek teşvikleri ücretsiz değerlendiriyoruz.",
+                            },
+                            {
+                                q: "Türkiye'de istihdam ettiğim yabancı çalışan için SGK yükümlülüğüm var mı?",
+                                a: "Türkiye'de çalışma izniyle istihdam edilen yabancı uyruklu çalışanlar Türk Sosyal Güvenlik Kanunu'na tabidir. İşveren payı ve çalışan payı primlerinin hesaplanması, bildirim ve ödeme süreçlerini takip ediyoruz.",
+                            },
+                            {
+                                q: "Beyannamelerimi Türkçe bilmeden takip edebilir miyim?",
+                                a: "Tüm beyanname ve mali bildirimleri biz hazırlıyor ve sunuyoruz. Müvekkilerimize aylık raporlarını Türkçe, İngilizce veya Arapça olarak iletiyoruz. Türkçe bilmeniz gerekmiyor.",
+                            },
+                            {
+                                q: "Uzaktan hizmet alabilir miyim?",
+                                a: "Evet. Yurt dışında yerleşik müvekkillerimize e-posta, video görüşme ve dijital belge sistemi üzerinden tam kapsamlı hizmet veriyoruz. Türkiye'de fiziksel olarak bulunmanıza gerek yoktur.",
+                            },
+                        ],
+                    },
+                    contact: {
+                        label: "İletişim",
+                        title: "Ücretsiz ön görüşme için bize ulaşın",
+                        sub: "Türkiye'deki yatırımınız, mevcut şirketiniz veya mevzuat sorularınız için ilk görüşme ücretsizdir.",
+                        phone: "Telefon",
+                        address: "Adres",
+                        form: {
+                            name: "Ad Soyad",
+                            namePH: "Adınız ve soyadınız",
+                            email: "E-posta",
+                            subject: "Konu",
+                            message: "Mesajınız",
+                            messagePH: "Talebinizi kısaca belirtiniz...",
+                            send: "Mesaj Gönder",
+                            success:
+                                "✓ Mesajınız alındı. En kısa sürede dönüş yapacağız.",
+                            opt1: "Çalışma Müsaadesi",
+                            opt2: "Vergi Danışmanlığı",
+                            opt3: "Şirket Kuruluşu",
+                            opt4: "Diğer",
+                        },
+                    },
+                    footer: {
+                        copy: "© 2025 Oytun Yük Global Danışmanlık & Mali Müşavirlik. Tüm hakları saklıdır.",
+                        disclaimer:
+                            "Mali müşavirlik hizmetleri TÜRMOB mevzuatı çerçevesinde bilgilendirme amacıyla sunulmaktadır.",
+                        turmob: "TÜRMOB Üyesi",
+                        sicil: "Ruhsat No: XXXX-TR",
+                    },
+                },
+
+                en: {
+                    nav: {
+                        services: "Services",
+                        news: "Legal Updates",
+                        about: "About",
+                        contact: "Contact",
+                        login: "Client Portal",
+                    },
+                    hero: {
+                        badge: "TÜRMOB Licensed CPA | 15 Years Experience",
+                        headline:
+                            "Your Certified<br><em>Financial Advisor</em><br>in Turkey",
+                        sub: "Professional accounting, tax compliance, and regulatory advisory for foreign-capital companies operating in Turkey.",
+                        cta1: "Free Initial Consultation",
+                        cta2: "Explore Our Services →",
+                    },
+                    cred: {
+                        turmob: "TÜRMOB Member & Licensed CPA",
+                        sicil: "License No: XXXX-TR",
+                        langs: "TR · EN · AR Language Support",
+                        exp: "15+ Years Professional Experience",
+                    },
+                    stats: {
+                        experience: "Years Experience",
+                        clients: "Foreign Clients",
+                        languages: "Languages",
+                        compliance: "Regulatory Compliance",
+                    },
+                    services: {
+                        label: "Our Services",
+                        title: "We manage Turkey's legal processes on your behalf",
+                        sub: "Comprehensive financial advisory and regulatory consultancy for foreign-capital companies and individual investors.",
+                        s1: {
+                            title: "Work Permits",
+                            desc: "Full management of work permit applications, tracking, and renewals for foreign employees and executives.",
+                        },
+                        s2: {
+                            title: "Tax Exemptions & Incentives",
+                            desc: "Strategic planning to maximize the tax advantages legally available to foreign investors in Turkey.",
+                        },
+                        s3: {
+                            title: "Tax Law Changes",
+                            desc: "We monitor Turkey's continuously evolving tax legislation and prepare your company in advance for every change.",
+                        },
+                        s4: {
+                            title: "Social Security Law",
+                            desc: "Compliant management of social security obligations and insurance processes for foreign employees in Turkey.",
+                        },
+                        s5: {
+                            title: "Company Formation",
+                            desc: "Foreign-capital company establishment, trade registry, and complete management of all legal procedures.",
+                        },
+                        s6: {
+                            title: "Accounting & Financial Advisory",
+                            desc: "Bookkeeping, tax filing, and financial reporting in compliance with Turkish accounting standards.",
+                        },
+                    },
+                    news: {
+                        label: "Legal Updates & Announcements",
+                        title: "Current tax and regulatory news",
+                        all: "View All Updates →",
+                        read: "Read More →",
+                        tag: {
+                            vergi: "Tax",
+                            sgk: "Social Security",
+                            yatirim: "Investment Incentive",
+                        },
+                        n1: {
+                            title: "2025 Corporate Tax Rate Amendment",
+                            desc: "Updates to the corporate tax rate for the 2025 fiscal year announced by the Ministry of Treasury and Finance, and their impact on foreign-capital companies.",
+                        },
+                        n2: {
+                            title: "Social Security Registration for Foreign Employees",
+                            desc: "Current regulation on social security registration and premium payment obligations for foreign nationals employed in Turkey.",
+                        },
+                        n3: {
+                            title: "New Investment Incentive Certificate Guide",
+                            desc: "Updated application criteria for investment incentive certificates issued by the Ministry of Economy, including priority region advantages for foreign investors.",
+                        },
+                    },
+                    cal: {
+                        label: "Tax Calendar",
+                        title: "Upcoming filing deadlines",
+                        sub: "Stay on top of your tax and social security obligations in Turkey. Work with your advisor to never miss a deadline.",
+                        th: {
+                            deadline: "Due Date",
+                            type: "Declaration / Filing",
+                            period: "Period",
+                            note: "Status",
+                        },
+                        r1: {
+                            type: "Withholding Tax & SGK Declaration",
+                            period: "April 2025",
+                        },
+                        r2: {
+                            type: "VAT Declaration (1)",
+                            period: "April 2025",
+                        },
+                        r3: {
+                            type: "Provisional Tax Declaration",
+                            period: "Q1 2025",
+                        },
+                        r4: {
+                            type: "Withholding Tax & SGK Declaration",
+                            period: "May 2025",
+                        },
+                        r5: { type: "VAT Declaration (1)", period: "May 2025" },
+                        badge: { upcoming: "Upcoming", normal: "Scheduled" },
+                        disclaimer:
+                            "* For the official calendar, please refer to the Revenue Administration (gib.gov.tr).",
+                    },
+                    about: {
+                        label: "About Us",
+                        title: "A financial advisory practice built on professional expertise",
+                        p1: "We provide financial and tax advisory services tailored exclusively for foreign investors operating in Turkey. As a TÜRMOB-licensed certified public accountant, we manage all regulatory processes on your behalf.",
+                        p2: "With support in Turkish, English, and Arabic, we serve clients from a wide range of countries. Delivering bespoke solutions for each client is our core professional commitment.",
+                        c1: "Certified Public Accountant (SMMM) — TÜRMOB Licensed",
+                        c2: "Foreign Capital Investment Legislation Specialist",
+                        c3: "TÜRMOB member, continuous professional development",
+                        c4: "Successfully served 200+ foreign investors",
+                    },
+                    faq: {
+                        label: "FAQ",
+                        title: "Questions foreign investors frequently ask",
+                        items: [
+                            {
+                                q: "Can a foreign national establish a company in Turkey?",
+                                a: "Yes. Turkish law permits foreign nationals and legal entities to establish Limited (Ltd. Şti.) or Joint Stock (A.Ş.) companies. We manage the entire incorporation process on your behalf, including minimum capital requirements and notarised documents.",
+                            },
+                            {
+                                q: "How long does a work permit application take?",
+                                a: "The statutory processing period is 30 business days; however, complete applications are typically processed in 15-20 days. We handle all document preparation and tracking through the government e-portal.",
+                            },
+                            {
+                                q: "What tax advantages are available to foreign investors?",
+                                a: "Available incentives include VAT and customs duty exemptions in priority investment zones, reduced corporate tax rates with an investment incentive certificate, and withholding tax reductions for R&D and technology investments. We conduct a free assessment of applicable incentives for your company profile.",
+                            },
+                            {
+                                q: "Do I have social security obligations for my foreign employees in Turkey?",
+                                a: "Foreign nationals employed in Turkey with a valid work permit are subject to Turkish Social Security Law. We manage the calculation, reporting, and payment of both employer and employee premium contributions.",
+                            },
+                            {
+                                q: "Can I follow my tax filings without knowing Turkish?",
+                                a: "All declarations and financial notifications are prepared and submitted by us. We provide monthly reports to clients in Turkish, English, or Arabic. No knowledge of Turkish is required.",
+                            },
+                            {
+                                q: "Can I receive services remotely?",
+                                a: "Yes. We provide fully comprehensive services to internationally based clients via email, video calls, and our digital document system. There is no requirement for you to be physically present in Turkey.",
+                            },
+                        ],
+                    },
+                    contact: {
+                        label: "Contact",
+                        title: "Reach out for a free initial consultation",
+                        sub: "Your first consultation regarding your investment in Turkey, your existing company, or regulatory questions is complimentary.",
+                        phone: "Phone",
+                        address: "Address",
+                        form: {
+                            name: "Full Name",
+                            namePH: "Your full name",
+                            email: "Email",
+                            subject: "Subject",
+                            message: "Message",
+                            messagePH: "Briefly describe your request...",
+                            send: "Send Message",
+                            success:
+                                "✓ Your message has been received. We will respond shortly.",
+                            opt1: "Work Permit",
+                            opt2: "Tax Advisory",
+                            opt3: "Company Formation",
+                            opt4: "Other",
+                        },
+                    },
+                    footer: {
+                        copy: "© 2025 Oytun Yük Global Advisory & Financial Consultancy. All rights reserved.",
+                        disclaimer:
+                            "Financial advisory services are provided for informational purposes within the framework of TÜRMOB regulations.",
+                        turmob: "TÜRMOB Member",
+                        sicil: "License No: XXXX-TR",
+                    },
+                },
+
+                ar: {
+                    nav: {
+                        services: "الخدمات",
+                        news: "التحديثات القانونية",
+                        about: "من نحن",
+                        contact: "اتصل بنا",
+                        login: "بوابة العميل",
+                    },
+                    hero: {
+                        badge: "مستشار مالي معتمد TÜRMOB | 15 عامًا من الخبرة",
+                        headline:
+                            "مستشارك المالي<br><em>المعتمد</em><br>في تركيا",
+                        sub: "خدمات محاسبية وامتثال ضريبي واستشارات تنظيمية للشركات ذات رأس المال الأجنبي العاملة في تركيا.",
+                        cta1: "استشارة أولية مجانية",
+                        cta2: "استكشف خدماتنا →",
+                    },
+                    cred: {
+                        turmob: "عضو TÜRMOB ومحاسب قانوني معتمد",
+                        sicil: "رقم الترخيص: XXXX-TR",
+                        langs: "TR · EN · AR دعم اللغات",
+                        exp: "أكثر من 15 عامًا من الخبرة المهنية",
+                    },
+                    stats: {
+                        experience: "سنوات خبرة",
+                        clients: "عميل أجنبي",
+                        languages: "لغات الدعم",
+                        compliance: "الامتثال التنظيمي",
+                    },
+                    services: {
+                        label: "خدماتنا",
+                        title: "ندير الإجراءات القانونية في تركيا نيابةً عنك",
+                        sub: "استشارات مالية وتنظيمية شاملة للشركات ذات رأس المال الأجنبي والمستثمرين الأفراد.",
+                        s1: {
+                            title: "تصاريح العمل",
+                            desc: "إدارة كاملة لطلبات تصاريح العمل وتتبعها وتجديدها للعمالة الأجنبية والمديرين التنفيذيين.",
+                        },
+                        s2: {
+                            title: "الإعفاءات والحوافز الضريبية",
+                            desc: "تخطيط استراتيجي للاستفادة القصوى من المزايا الضريبية المتاحة قانونيًا للمستثمرين الأجانب في تركيا.",
+                        },
+                        s3: {
+                            title: "التغييرات في قانون الضرائب",
+                            desc: "نتابع التشريعات الضريبية التركية المتطورة باستمرار ونُعِد شركتك لكل تغيير مسبقًا.",
+                        },
+                        s4: {
+                            title: "قانون الضمان الاجتماعي",
+                            desc: "إدارة ممتثلة لالتزامات الضمان الاجتماعي وإجراءات التأمين للموظفين الأجانب في تركيا.",
+                        },
+                        s5: {
+                            title: "تأسيس الشركات",
+                            desc: "تأسيس شركات برأس مال أجنبي وتسجيل السجل التجاري وإدارة جميع الإجراءات القانونية.",
+                        },
+                        s6: {
+                            title: "المحاسبة والاستشارات المالية",
+                            desc: "مسك الدفاتر وإعداد الإقرارات الضريبية والتقارير المالية وفقًا للمعايير المحاسبية التركية.",
+                        },
+                    },
+                    news: {
+                        label: "التحديثات القانونية والإعلانات",
+                        title: "أخبار الضرائب واللوائح الجارية",
+                        all: "عرض جميع التحديثات →",
+                        read: "اقرأ المزيد →",
+                        tag: {
+                            vergi: "ضرائب",
+                            sgk: "الضمان الاجتماعي",
+                            yatirim: "حوافز الاستثمار",
+                        },
+                        n1: {
+                            title: "تعديل معدل ضريبة الشركات لعام 2025",
+                            desc: "تحديثات معدل ضريبة الشركات للسنة المالية 2025 الصادرة عن وزارة الخزانة والمالية وتأثيرها على الشركات ذات رأس المال الأجنبي.",
+                        },
+                        n2: {
+                            title: "التسجيل في الضمان الاجتماعي للعمالة الأجنبية",
+                            desc: "اللائحة الحالية بشأن التسجيل في الضمان الاجتماعي والتزامات دفع الاشتراكات للرعايا الأجانب العاملين في تركيا.",
+                        },
+                        n3: {
+                            title: "دليل طلب شهادة حوافز الاستثمار الجديد",
+                            desc: "معايير تقديم الطلبات المحدثة لشهادات حوافز الاستثمار الصادرة عن وزارة الاقتصاد، بما في ذلك مزايا المناطق ذات الأولوية للمستثمرين الأجانب.",
+                        },
+                    },
+                    cal: {
+                        label: "التقويم الضريبي",
+                        title: "المواعيد النهائية القادمة للتقديم",
+                        sub: "تابع التزاماتك الضريبية والضمان الاجتماعي في تركيا. اعمل مع مستشارك لعدم تفويت أي موعد.",
+                        th: {
+                            deadline: "الموعد النهائي",
+                            type: "الإقرار / التقديم",
+                            period: "الفترة",
+                            note: "الحالة",
+                        },
+                        r1: {
+                            type: "إقرار ضريبة الاستقطاع والضمان الاجتماعي",
+                            period: "أبريل 2025",
+                        },
+                        r2: {
+                            type: "إقرار ضريبة القيمة المضافة (1)",
+                            period: "أبريل 2025",
+                        },
+                        r3: {
+                            type: "إقرار الضريبة المؤقتة",
+                            period: "الربع الأول 2025",
+                        },
+                        r4: {
+                            type: "إقرار ضريبة الاستقطاع والضمان الاجتماعي",
+                            period: "مايو 2025",
+                        },
+                        r5: {
+                            type: "إقرار ضريبة القيمة المضافة (1)",
+                            period: "مايو 2025",
+                        },
+                        badge: { upcoming: "قريبًا", normal: "مجدول" },
+                        disclaimer:
+                            "* للتقويم الرسمي، يرجى الرجوع إلى إدارة الإيرادات (gib.gov.tr).",
+                    },
+                    about: {
+                        label: "من نحن",
+                        title: "ممارسة استشارية مالية مبنية على الخبرة المهنية",
+                        p1: "نقدم خدمات استشارية مالية وضريبية مصممة حصراً للمستثمرين الأجانب العاملين في تركيا. بصفتنا محاسبًا قانونيًا معتمدًا من TÜRMOB، ندير جميع الإجراءات التنظيمية نيابةً عنك.",
+                        p2: "بدعم باللغات التركية والإنجليزية والعربية، نخدم موكلين من دول مختلفة. تقديم حلول مخصصة لكل موكل هو التزامنا المهني الأساسي.",
+                        c1: "محاسب قانوني معتمد (SMMM) — مرخّص من TÜRMOB",
+                        c2: "متخصص في تشريعات الاستثمار الأجنبي",
+                        c3: "عضو TÜRMOB، برنامج التطوير المهني المستمر",
+                        c4: "خدمنا بنجاح أكثر من 200 مستثمر أجنبي",
+                    },
+                    faq: {
+                        label: "الأسئلة الشائعة",
+                        title: "أسئلة يطرحها المستثمرون الأجانب كثيرًا",
+                        items: [
+                            {
+                                q: "هل يمكن لمواطن أجنبي تأسيس شركة في تركيا؟",
+                                a: "نعم. يسمح القانون التركي للأشخاص الطبيعيين والاعتباريين الأجانب بتأسيس شركات ذات مسؤولية محدودة أو مساهمة. ندير عملية التأسيس بالكامل نيابةً عنك، بما في ذلك متطلبات رأس المال الأدنى والوثائق الموثقة.",
+                            },
+                            {
+                                q: "كم يستغرق تقديم طلب تصريح العمل؟",
+                                a: "مدة المعالجة القانونية 30 يوم عمل؛ غير أن الطلبات المكتملة تُعالج عادةً في 15-20 يومًا. نتولى إعداد جميع المستندات والتتبع عبر بوابة الحكومة الإلكترونية.",
+                            },
+                            {
+                                q: "ما هي المزايا الضريبية المتاحة للمستثمرين الأجانب؟",
+                                a: "تشمل الحوافز المتاحة: إعفاء من ضريبة القيمة المضافة والجمارك في مناطق الاستثمار ذات الأولوية، ومعدلات ضريبة شركات مخفضة بموجب شهادة الحوافز، وتخفيضات ضريبة الاستقطاع للاستثمارات التقنية والبحثية. نجري تقييمًا مجانيًا للحوافز المطبقة على ملف شركتك.",
+                            },
+                            {
+                                q: "هل لدي التزامات ضمان اجتماعي تجاه موظفيّ الأجانب في تركيا؟",
+                                a: "يخضع الرعايا الأجانب العاملون في تركيا بتصريح عمل ساري لقانون الضمان الاجتماعي التركي. نتولى حساب وإعداد تقارير ودفع اشتراكات صاحب العمل والعامل.",
+                            },
+                            {
+                                q: "هل يمكنني متابعة إقراراتي الضريبية دون معرفة التركية؟",
+                                a: "نحن من نُعِد ونُقدِّم جميع الإقرارات والإشعارات المالية. نقدم التقارير الشهرية لموكلينا باللغة التركية أو الإنجليزية أو العربية. لا يُشترط معرفة اللغة التركية.",
+                            },
+                            {
+                                q: "هل يمكنني تلقي الخدمات عن بُعد؟",
+                                a: "نعم. نقدم خدمات شاملة للموكلين المقيمين في الخارج عبر البريد الإلكتروني ومكالمات الفيديو ونظام المستندات الرقمية. لا يتطلب الأمر وجودك الجسدي في تركيا.",
+                            },
+                        ],
+                    },
+                    contact: {
+                        label: "اتصل بنا",
+                        title: "تواصل معنا للحصول على استشارة أولية مجانية",
+                        sub: "استشارتك الأولى بشأن استثمارك في تركيا أو شركتك القائمة أو أسئلتك التنظيمية مجانية تمامًا.",
+                        phone: "الهاتف",
+                        address: "العنوان",
+                        form: {
+                            name: "الاسم الكامل",
+                            namePH: "اسمك الكامل",
+                            email: "البريد الإلكتروني",
+                            subject: "الموضوع",
+                            message: "رسالتك",
+                            messagePH: "اشرح طلبك باختصار...",
+                            send: "إرسال الرسالة",
+                            success:
+                                "✓ تم استلام رسالتك. سنرد عليك في أقرب وقت.",
+                            opt1: "تصريح عمل",
+                            opt2: "الاستشارات الضريبية",
+                            opt3: "تأسيس شركة",
+                            opt4: "أخرى",
+                        },
+                    },
+                    footer: {
+                        copy: "© 2025 أويتون يوك للاستشارات العالمية والاستشارات المالية. جميع الحقوق محفوظة.",
+                        disclaimer:
+                            "تُقدَّم خدمات الاستشارات المالية لأغراض إعلامية وفق أطر لوائح TÜRMOB.",
+                        turmob: "عضو TÜRMOB",
+                        sicil: "رقم الترخيص: XXXX-TR",
+                    },
+                },
+            };
+
+            // ─── LANGUAGE ENGINE ──────────────────────────────────────────────────
+            let currentLang = "tr";
+
+            function getNestedVal(obj, path) {
+                return path
+                    .split(".")
+                    .reduce(
+                        (o, k) => (o && o[k] !== undefined ? o[k] : null),
+                        obj,
+                    );
+            }
+
+            function buildFaq(lang) {
+                const items = T[lang]?.faq?.items;
+                if (!items) return;
+                const list = document.getElementById("faqList");
+                list.innerHTML = items
+                    .map(
+                        (item, i) => `
+                <div class="faq-item" id="faq-${i}">
+                    <button class="faq-q" onclick="toggleFaq(${i})">
+                        <span>${item.q}</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-a" id="faq-a-${i}"><p>${item.a}</p></div>
+                </div>
+            `,
+                    )
+                    .join("");
+            }
+
+            function applyTranslations(lang) {
+                const t = T[lang];
+                if (!t) return;
+                currentLang = lang;
+
+                const html = document.getElementById("app");
+                html.lang = lang;
+                html.dir = lang === "ar" ? "rtl" : "ltr";
+
+                document.querySelectorAll("[data-i18n]").forEach((el) => {
+                    const val = getNestedVal(t, el.dataset.i18n);
+                    if (val !== null) el.textContent = val;
+                });
+                document.querySelectorAll("[data-i18n-html]").forEach((el) => {
+                    const val = getNestedVal(t, el.dataset.i18nHtml);
+                    if (val !== null) el.innerHTML = val;
+                });
+                document
+                    .querySelectorAll("[data-i18n-placeholder]")
+                    .forEach((el) => {
+                        const val = getNestedVal(t, el.dataset.i18nPlaceholder);
+                        if (val !== null) el.placeholder = val;
+                    });
+                document.querySelectorAll(".lang-btn").forEach((btn) => {
+                    btn.classList.toggle(
+                        "active",
+                        btn.textContent.trim().toLowerCase() === lang,
+                    );
+                });
+
+                // Rebuild FAQ for new language
+                buildFaq(lang);
+
+                localStorage.setItem("preferred_lang", lang);
+            }
+
+            function setLang(lang) {
+                applyTranslations(lang);
+            }
+
+            // ─── FAQ ACCORDION ────────────────────────────────────────────────────
+            function toggleFaq(index) {
+                const answer = document.getElementById(`faq-a-${index}`);
+                const item = document.getElementById(`faq-${index}`);
+                const isOpen = item.classList.contains("open");
+
+                // Close all
+                document
+                    .querySelectorAll(".faq-item")
+                    .forEach((el) => el.classList.remove("open"));
+                document
+                    .querySelectorAll(".faq-a")
+                    .forEach((el) => (el.style.maxHeight = null));
+
+                if (!isOpen) {
+                    item.classList.add("open");
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            }
+
+            // ─── MOBILE MENU ──────────────────────────────────────────────────────
+            function toggleMenu() {
+                const menu = document.getElementById("mobileMenu");
+                const btn = document.getElementById("hamburger");
+                menu.classList.toggle("open");
+                btn.classList.toggle("open");
+            }
+
+            // ─── FORM SUBMIT (UI feedback, backend hazır olunca bağlanacak) ───────
+            function handleFormSubmit(e) {
+                e.preventDefault();
+                const btn = document.getElementById("submitBtn");
+                const success = document.getElementById("formSuccess");
+                btn.disabled = true;
+                btn.style.opacity = "0.6";
+                setTimeout(() => {
+                    success.classList.add("visible");
+                    btn.disabled = false;
+                    btn.style.opacity = "1";
+                    e.target.reset();
+                }, 800);
+            }
+
+            // ─── GEOLOCATION → LANGUAGE ───────────────────────────────────────────
+            const ARABIC_COUNTRIES = new Set([
+                "SA",
+                "AE",
+                "EG",
+                "IQ",
+                "SY",
+                "JO",
+                "LB",
+                "KW",
+                "QA",
+                "BH",
+                "OM",
+                "YE",
+                "LY",
+                "TN",
+                "DZ",
+                "MA",
+                "SD",
+                "SO",
+                "MR",
+                "DJ",
+                "KM",
+                "PS",
+            ]);
+
+            async function detectLanguage() {
+                const saved = localStorage.getItem("preferred_lang");
+                if (saved && T[saved]) {
+                    applyTranslations(saved);
+                    return;
+                }
+                try {
+                    // Production'da Cloudflare CF-IPCountry header'ı kullanılacak (backend'den)
+                    const resp = await fetch("https://ipapi.co/json/", {
+                        signal: AbortSignal.timeout(3500),
+                    });
+                    const data = await resp.json();
+                    const cc = (data.country_code || "").toUpperCase();
+                    if (cc === "TR") applyTranslations("tr");
+                    else if (ARABIC_COUNTRIES.has(cc)) applyTranslations("ar");
+                    else applyTranslations("en");
+                } catch {
+                    const bl = (navigator.language || "tr")
+                        .slice(0, 2)
+                        .toLowerCase();
+                    if (bl === "tr") applyTranslations("tr");
+                    else if (bl === "ar") applyTranslations("ar");
+                    else applyTranslations("en");
+                }
+            }
+
+            // ─── SCROLL ANIMATIONS ────────────────────────────────────────────────
+            const observer = new IntersectionObserver(
+                (entries) =>
+                    entries.forEach((e) => {
+                        if (e.isIntersecting) {
+                            e.target.classList.add("visible");
+                            observer.unobserve(e.target);
+                        }
+                    }),
+                { threshold: 0.08, rootMargin: "0px 0px -40px 0px" },
+            );
+
+            // ─── INIT ─────────────────────────────────────────────────────────────
+            document.addEventListener("DOMContentLoaded", async () => {
+                applyTranslations("tr");
+                await detectLanguage();
+
+                const loader = document.getElementById("lang-loader");
+                loader.classList.add("hidden");
+                setTimeout(() => loader.remove(), 500);
+
+                document.querySelectorAll(".hero .fade-up").forEach((el, i) => {
+                    setTimeout(() => el.classList.add("visible"), 80 + i * 120);
+                });
+                document
+                    .querySelectorAll(".fade-up:not(.visible)")
+                    .forEach((el) => observer.observe(el));
+            });
+        </script>
+    </body>
+</html>
